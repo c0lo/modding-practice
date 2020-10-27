@@ -1,0 +1,11 @@
+{
+	"item.modinfo.ghastqueen_spawn_egg": "Cursed Ghast Spawn Egg",
+"item.modinfo.treasurecrab_spawn_egg": "Treasure crab Spawn Egg",
+"item.modinfo.summoner_spawn_egg": "Desert Summoner Spawn Egg",
+"item.modinfo.mummy_spawn_egg": "Mummy Spawn Egg",
+	"entity.modinfo.treasurecrab": "Treasure crab",
+	"entity.modinfo.ghastqueenentity": "Cursed Ghast",
+"entity.modinfo.mummyentity": "Mummy",
+"entity.modinfo.summoner": "Desert Summoner"
+}
+
