@@ -14,9 +14,13 @@ public class Iteminit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             modinfo.ModID);
 
-    public static final RegistryObject<ModSpawnEggItem> ASTAROTH_EGG = ITEMS.register("astaroth_spawn_egg",
+    public static final RegistryObject<ModSpawnEggItem> ASTAROTH_EGG = ITEMS.register("wardenofsorrow_spawn_egg",
             () -> new ModSpawnEggItem(Entities.ASTAROTH, 0x17254F, 0x9FE8DC,
                     new Item.Properties().group(ItemGroup.MISC).maxStackSize(64)));
+    public static final RegistryObject<ModSpawnEggItem> STATUE_EGG = ITEMS.register("statue_spawn_egg",
+            () -> new ModSpawnEggItem(Entities.STATUE, 0xBFC7D0, 0x9FE8DC,
+                    new Item.Properties().group(ItemGroup.MISC).maxStackSize(64)));
+
 
 
 }

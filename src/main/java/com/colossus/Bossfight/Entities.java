@@ -26,8 +26,8 @@ public class Entities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPE = DeferredRegister.create(ForgeRegistries.ENTITIES,
             modinfo.ModID);
 
-    public static final RegistryObject<EntityType<AstarothEntity>>ASTAROTH = ENTITY_TYPE.register("ghastqueen", () -> createLivingNetherEntity(AstarothEntity::new, EntityClassification.MONSTER, "astaroth", 1F, 2.5F));
-
+    public static final RegistryObject<EntityType<AstarothEntity>>ASTAROTH = ENTITY_TYPE.register("wardenofsorrow", () -> createLivingNetherEntity(AstarothEntity::new, EntityClassification.MONSTER, "wardenofsorrow", 1F, 2.5F));
+    public static final RegistryObject<EntityType<StatueEntity>>STATUE = ENTITY_TYPE.register("statue", () -> createLivingNetherEntity(StatueEntity::new, EntityClassification.MONSTER, "statue", 1F, 1F));
     private static <E extends Entity> RegistryObject<EntityType<E>> registerEntityType(String name, EntityType.Builder<E> builder) {
         return ENTITY_TYPE.register(name, () -> builder.build(modinfo.ModID + ":" + name));
     }
@@ -37,9 +37,7 @@ public class Entities {
 
 
 
-    public static final List<Biome> DesertBiomes = Lists.newArrayList(Biomes.DESERT, Biomes.DESERT_HILLS);
-    public static final List<Biome> NetherBiomes = Lists.newArrayList(Biomes.NETHER);
-    public static final List<Biome> OceanBiomes = Lists.newArrayList(Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_WARM_OCEAN, Biomes.WARM_OCEAN);
+
 
 
     //=========================================================================================================================================================================================================================================
@@ -88,25 +86,5 @@ public class Entities {
                 );
         return entity;
     }
-
-    //=========================================================================================================================================================================================================================================
-    //=========================================================================================================================================================================================================================================
-
-    @SuppressWarnings("unchecked")
-    private static <T extends MobEntity> void registerCustomSpawnEntry(EntityType<T> entity, List<Biome> biomes, int frequency, int minAmount, int maxAmount, EntitySpawnPlacementRegistry.PlacementType placementType, Heightmap.Type heightMapType, @SuppressWarnings("rawtypes") EntitySpawnPlacementRegistry.IPlacementPredicate canSpawnHere)
-    {
-        registerBiomeSpawnEntry(entity, frequency, minAmount, maxAmount, biomes);
-        EntitySpawnPlacementRegistry.register(entity, placementType, heightMapType, canSpawnHere);
-    }
-
-
-
-    private static void registerBiomeSpawnEntry(EntityType<?> entity, int frequency, int minAmount, int maxAmount, List<Biome> biomes)
-    {
-        biomes.stream().filter(Objects::nonNull).forEach(biome -> biome.getSpawns(entity.getClassification()).add(new Biome.SpawnListEntry(entity, frequency, minAmount, maxAmount)));
-    }
-
-
- 
 
 }

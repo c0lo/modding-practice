@@ -7,6 +7,7 @@ package com.colossus.Bossfight;
 
 import com.colossus.Bossfight.entity.Client.*;
 
+import com.colossus.Bossfight.entity.Entity.entity.StatueEntity;
 import com.colossus.Bossfight.item.items.ModSpawnEggItem;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,7 @@ public class ModEventBus
 	public static void registerEntityRenderers(final FMLClientSetupEvent event)
 	{
 		RenderingRegistry.registerEntityRenderingHandler(Entities.ASTAROTH.get(), AstarothRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(Entities.STATUE.get(), StatueRenderer::new);
 	}
 	@SubscribeEvent
 	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event){

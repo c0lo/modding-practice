@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "shit:blocks/icy_stone",
+    "up": "shit:blocks/icy_stone",
+    "north": "shit:blocks/icy_stone",
+    "east": "shit:blocks/icy_stone",
+    "south": "shit:blocks/icy_stone",
+    "west": "shit:blocks/icy_stone",
+    "particle": "shit:blocks/icy_stone"
+  }
+}
